@@ -1,5 +1,8 @@
+from datetime import datetime
+
 from note import Note
 from storage import Storage
+
 class Notebook:
     def __init__(self, storage: Storage) -> None:
         self.__storage = storage
@@ -19,7 +22,7 @@ class Notebook:
         return self.notes
 
     def get_note(self, note_id: int) -> Note:
-        pass
+        return Note(id=id, text='Not real note', created_date=datetime.now())
 
 
 if __name__ == '__main__':
